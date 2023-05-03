@@ -19,11 +19,11 @@ The main components of the simulation are:
 
 ## Usage
 
-To run the simulation, compile and execute the `Simulation.java` file. The program will display the progress of workers and drivers as they complete their tasks. The simulation can be stopped by terminating the program.
+To run the simulation, compile and execute the `main.java` file. The program will display the progress of workers and drivers as they complete their tasks. The simulation can be stopped by terminating the program.
 
 ## Customization
 
-The simulation can be customized by modifying the parameters of the `Usine`, `Livreur`, and `Ouvrier` instances created in the `Simulation.java` file. You can adjust the number of storage containers, the types and quantities of components delivered, and the types of products produced by the workers.
+The simulation can be customized by modifying the parameters of the `Usine`, `Livreur`, and `Ouvrier` instances created in the `main.java` file. You can adjust the number of storage containers, the types and quantities of components delivered, and the types of products produced by the workers.
 
 ## Contributing
 
