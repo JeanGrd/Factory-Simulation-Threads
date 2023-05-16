@@ -12,7 +12,20 @@ public class Bac {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Thread interrompu");
+                Thread currentThread = Thread.currentThread();
+                if(currentThread instanceof Livreur){
+                    if(((Livreur)currentThread).isFinDeJournee()) {
+                        return;
+                    } else {
+                        System.out.println(((Livreur)currentThread).getEtat());
+                    }
+                } else if(currentThread instanceof Ouvrier){
+                    if(((Ouvrier)currentThread).isFinDeJournee()) {
+                        return;
+                    } else {
+                        System.out.println(((Ouvrier)currentThread).getEtat());
+                    }
+                }
             }
         }
         contenu += quantite;
@@ -24,7 +37,20 @@ public class Bac {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Thread interrompu");
+                Thread currentThread = Thread.currentThread();
+                if(currentThread instanceof Livreur){
+                    if(((Livreur)currentThread).isFinDeJournee()) {
+                        return 0;
+                    } else {
+                        System.out.println(((Livreur)currentThread).getEtat());
+                    }
+                } else if(currentThread instanceof Ouvrier){
+                    if(((Ouvrier)currentThread).isFinDeJournee()) {
+                        return 0;
+                    } else {
+                        System.out.println(((Ouvrier)currentThread).getEtat());
+                    }
+                }
             }
         }
         contenu -= quantite;
@@ -32,3 +58,4 @@ public class Bac {
         return quantite;
     }
 }
+
