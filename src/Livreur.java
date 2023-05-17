@@ -16,10 +16,6 @@ public class Livreur extends Thread {
         this.finDeJournee = valeur;
     }
 
-    public boolean isFinDeJournee() {
-        return this.finDeJournee;
-    }
-
     @Override
     public void run() {
         while (!finDeJournee) {
@@ -37,5 +33,9 @@ public class Livreur extends Thread {
 
     public String getEtat() {
         return this.etat;
+    }
+
+    public boolean isFinDeJournee() {
+        return this.finDeJournee;
     }
 }

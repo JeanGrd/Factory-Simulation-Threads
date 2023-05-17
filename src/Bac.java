@@ -58,4 +58,3 @@ public class Bac {
         return quantite;
     }
 }
-
